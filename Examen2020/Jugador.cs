@@ -46,7 +46,6 @@ namespace Examen2020
 
                 }
 
-
                 else
                 {
                     Tapadadelarquero(jugadores);

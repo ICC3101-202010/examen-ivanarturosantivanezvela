@@ -37,20 +37,34 @@ namespace Examen2020
             this.NombredelEquipo = nombredelequipo;
         }
 
+        
+
+        public static int PedirInt(string explicacion)
+        {
+            int valor = 0;
+            bool valido = false;
+            while (!valido)
+            {
+                Console.WriteLine(explicacion);
+                valido = int.TryParse(Console.ReadLine(), out valor);
+                if (!valido)
+                    Console.WriteLine("Ingresa un numero valido válido");
+            }
+            return valor;
+        }
+
+
         public void AgregarEntrenador()
         {
 
             //Caracteristicas
             Console.WriteLine("Escriba el nombre de su entrenador");
             string NombreEntrenador = Console.ReadLine();
-            Console.WriteLine("Escriba la edad de su entrenador");
-            int EdadEntrenador = Convert.ToInt32(Console.ReadLine());
+            int EdadEntrenador = PedirInt("Escriba la edad de su entrenador");
             Console.WriteLine("Escriba la Nacionalidad del entrenador");
             string NacionalidadEntrenador = Console.ReadLine();
-            Console.WriteLine("Escriba el sueldo de su entrenador");
-            int SueldoEntrenador = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Escriba los puntos de tactica del entrenador");
-            int Puntosdetactica = Convert.ToInt32(Console.ReadLine());
+            int SueldoEntrenador = PedirInt("Escriba el sueldo de su entrenador");
+            int Puntosdetactica = PedirInt("Escriba los puntos de tactica del entrenador");
 
             Entrenador entrenador = new Entrenador(NombreEntrenador, EdadEntrenador, NacionalidadEntrenador, SueldoEntrenador,Puntosdetactica);
 
@@ -68,15 +82,12 @@ namespace Examen2020
 
             //Caracteristicas
             Console.WriteLine("Escriba el nombre de su medico");
-            string NombreMedico= Console.ReadLine();
-            Console.WriteLine("Escriba la edad de su medico");
-            int Edadmedico = Convert.ToInt32(Console.ReadLine());
+            string NombreMedico = Console.ReadLine();
+            int Edadmedico = PedirInt("Escriba la edad de su medico");
             Console.WriteLine("Escriba la Nacionalidad del medico");
             string NacionalidadMedico = Console.ReadLine();
-            Console.WriteLine("Escriba el sueldo de su medico");
-            int SueldoMedico = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Escriba los puntos de tactica del entrenador");
-            int PuntosdeExperiencia = Convert.ToInt32(Console.ReadLine());
+            int SueldoMedico = PedirInt("Escriba el sueldo de su medico");
+            int PuntosdeExperiencia = PedirInt("Escriba los puntos de experiencia del medico");
 
 
 
@@ -101,33 +112,29 @@ namespace Examen2020
                     //Caracteristicas
                     Console.WriteLine("Escriba el nombre de su jugador");
                     string NombreJugador = Console.ReadLine();
-                    Console.WriteLine("Escriba la edad de su jugador");
-                    int Edad = Convert.ToInt32(Console.ReadLine());
+                    int Edad = PedirInt("Escriba la edad de su jugador");
                     Console.WriteLine("Escriba la Nacionalidad del jugador");
                     string Nacionalidad= Console.ReadLine();
                     while (Nacionalidad.ToUpper() != NacionalidadDelEquipo.ToUpper())
                     {
                         Console.WriteLine("La nacionalidad del jugador no coincide con la del equipo, vuelva a escribirla");
                         Helpernacionalidad = Console.ReadLine();
-                        if (Helpernacionalidad == NacionalidadDelEquipo)
+                        if (Helpernacionalidad.ToUpper() == NacionalidadDelEquipo.ToUpper())
                         {
                             Nacionalidad = Helpernacionalidad;
+                            Helpernacionalidad = "";
                             break;
+
                         }
                         
+                        
                     }
-
-                    Console.WriteLine("Escriba el sueldo de su jugador");
-                    int Sueldo = Convert.ToInt32(Console.ReadLine());
-
+            
+                    int Sueldo = PedirInt("Escriba el sueldo de su jugador");
                     //Atributos
-                    Console.WriteLine("Escriba puntos de defensa del jugador");
-                    int PuntosdeDefenda = Convert.ToInt32(Console.ReadLine());
-                    Console.WriteLine("Escriba puntos de ataque del jugador");
-                    int PuntosdeAtaque = Convert.ToInt32(Console.ReadLine());
-                    Console.WriteLine("Escriba el numero de la camiseta del jugador");
-                    int Numerodecamiseta = Convert.ToInt32(Console.ReadLine());
-
+                    int PuntosdeDefenda = PedirInt("Escriba puntos de defensa del jugador");              
+                    int PuntosdeAtaque = PedirInt("Escriba puntos de ataque del jugador");                   
+                    int Numerodecamiseta = PedirInt("Escriba el numero de la camiseta del jugador");
                     Console.WriteLine("Desea que su jugador sea arquero? 1-Si 2-No");
                     string Arquero = Console.ReadLine();
 

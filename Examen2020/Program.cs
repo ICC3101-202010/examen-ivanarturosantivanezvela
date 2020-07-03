@@ -6,8 +6,8 @@ namespace Examen2020
     {
         public static void Main(string[] args)
         {
-            
-            
+
+            Console.WriteLine("Se le pediran 15 jugadores para un equipo y 15 jugadores para otro equipo");
             Console.WriteLine("Escriba la nacionalidad de su equipo");
             string Nacionalidad = Console.ReadLine();
             Console.WriteLine("Desea que su equipo sea equipo 1-Nacional o 0-Liga ");
@@ -31,103 +31,117 @@ namespace Examen2020
             Console.WriteLine("Nombre del segundo equipo ");
             string Nombredelequipo2 = Console.ReadLine();
 
-            Equipo equipo2 = new Equipo(Tipodeequipo2, Nacionalidad,Nombredelequipo2);
+            Equipo equipo2 = new Equipo(Tipodeequipo2, Nacionalidad2,Nombredelequipo2);
                 equipo2.AgregarJugadoresalEquipo();
                 equipo2.AgregarEntrenador();
                 equipo2.AgregarmedicoalEquipo();
-                
 
-
-            Console.WriteLine("Bienviedo a tu simulador de partido");
-            Console.WriteLine("1) Ver jugadores de equipo");
-            Console.WriteLine("2) Ver medico equipo");
-            Console.WriteLine("3) Ver entrenador equipo");
-            Console.WriteLine("4) Iiciar simulacion de un partido");
-            Console.WriteLine("5) Salir del programa");
-
-            string opcion = Console.ReadLine();
-
-            Partido partido = new Partido(equipo1, equipo2);
-
-            equipo1.SendingLesion += partido.OnLesiondelJugador;
-            equipo2.SendingLesion += partido.OnLesiondelJugador;
-
-
-
-
-            switch (opcion)
+            bool eleccion1 = true;
+            while (eleccion1)
             {
+                Console.WriteLine("Bienviedo a tu simulador de partido");
+                Console.WriteLine("1) Ver jugadores de equipo");
+                Console.WriteLine("2) Ver medico equipo");
+                Console.WriteLine("3) Ver entrenador equipo");
+                Console.WriteLine("4) Iiciar simulacion de un partido");
+                Console.WriteLine("5) Salir del programa");
 
-                case ("1"):
+                string opcion = Console.ReadLine();
 
-                    Console.WriteLine("Escriba el nombre del equipo que desea ver");
-                    string eleccion = Console.ReadLine();
-                    if (eleccion == equipo1.NombredelEquipo)
-                    {
+                Partido partido = new Partido(equipo1, equipo2);
 
-                        equipo1.RetornarJugadores();
-
-
-                    }
-                    else if (eleccion == equipo2.NombredelEquipo)
-                    {
-
-                        equipo2.RetornarJugadores();
+                equipo1.SendingLesion += partido.OnLesiondelJugador;
+                equipo2.SendingLesion += partido.OnLesiondelJugador;
 
 
-                    }
-
-                    break;
-                case ("2"):
-                    Console.WriteLine("Escriba el nombre del equipo que desea ver");
-                    string eleccion1 = Console.ReadLine();
-                    if (eleccion1 == equipo1.NombredelEquipo)
-                    {
-
-                        equipo1.RetornarMedico();
 
 
-                    }
-                    else if (eleccion1 == equipo2.NombredelEquipo)
-                    {
+                switch (opcion)
+                {
 
-                        equipo2.RetornarMedico();
+                    case ("1"):
 
+                        Console.WriteLine("Escriba el nombre del equipo que desea ver");
+                        string eleccion = Console.ReadLine();
+                        if (eleccion == equipo1.NombredelEquipo)
+                        {
 
-                    }
-                    break;
-                case ("3"):
-                    Console.WriteLine("Escriba el nombre del equipo que desea ver");
-                    string eleccion2 = Console.ReadLine();
-                    if (eleccion2 == equipo1.NombredelEquipo)
-                    {
-
-                        equipo1.RetornarEntrenador();
+                            equipo1.RetornarJugadores();
 
 
-                    }
-                    else if (eleccion2 == equipo2.NombredelEquipo)
-                    {
+                        }
+                        else if (eleccion == equipo2.NombredelEquipo)
+                        {
 
-                        equipo2.RetornarEntrenador();
-
-
-                    }
-                    break;
-                case ("4"):
+                            equipo2.RetornarJugadores();
 
 
-                    break;
+                        }
 
-                case ("5"):
+                        break;
+                    case ("2"):
+                        Console.WriteLine("Escriba el nombre del equipo que desea ver");
+                        string eleccion2 = Console.ReadLine();
+                        if (eleccion2 == equipo1.NombredelEquipo)
+                        {
 
-                    break;
+                            equipo1.RetornarMedico();
+
+
+                        }
+                        else if (eleccion2 == equipo2.NombredelEquipo)
+                        {
+
+                            equipo2.RetornarMedico();
+
+
+                        }
+                        break;
+                    case ("3"):
+                        Console.WriteLine("Escriba el nombre del equipo que desea ver");
+                        string eleccion3 = Console.ReadLine();
+                        if (eleccion3 == equipo1.NombredelEquipo)
+                        {
+
+                            equipo1.RetornarEntrenador();
+
+
+                        }
+                        else if (eleccion3 == equipo2.NombredelEquipo)
+                        {
+
+                            equipo2.RetornarEntrenador();
+
+
+                        }
+                        break;
+                    case ("4"):
+
+
+
+
+                        break;
+
+                    case ("5"):
+
+                        eleccion1 = false;
+
+                        break;
+
+
+
+
+
+                }
+
 
 
 
 
 
             }
+
+            
             
 
 

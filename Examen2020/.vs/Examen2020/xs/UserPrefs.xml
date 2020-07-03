@@ -1,21 +1,21 @@
 ﻿<Properties StartupConfiguration="{C9D9E3EB-D827-4863-A1A5-7B3BA386BADB}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="LesionjugadorEventArgs.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Equipo.cs">
     <Files>
-      <File FileName="Program.cs" Line="21" Column="57" />
-      <File FileName="Equipo.cs" Line="8" Column="24" />
-      <File FileName="Jugador.cs" Line="15" Column="71" />
-      <File FileName="Entrenador.cs" Line="23" Column="59" />
-      <File FileName="Medico.cs" Line="7" Column="40" />
-      <File FileName="Partido.cs" Line="13" Column="1" />
-      <File FileName="Persona.cs" Line="6" Column="30" />
-      <File FileName="LesionjugadorEventArgs.cs" Line="4" Column="50" />
+      <File FileName="Program.cs" Line="10" Column="13" />
+      <File FileName="Equipo.cs" Line="41" Column="1" />
+      <File FileName="Jugador.cs" />
+      <File FileName="Entrenador.cs" />
+      <File FileName="Medico.cs" />
+      <File FileName="Partido.cs" />
+      <File FileName="Persona.cs" />
+      <File FileName="LesionjugadorEventArgs.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Examen2020" expanded="True">
             <Node name="Examen2020" expanded="True">
-              <Node name="LesionjugadorEventArgs.cs" selected="True" />
+              <Node name="Equipo.cs" selected="True" />
             </Node>
           </Node>
         </State>

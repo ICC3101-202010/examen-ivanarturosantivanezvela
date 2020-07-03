@@ -5,7 +5,6 @@ namespace Examen2020
     {
         int Numero_de_goles_equipo1;
         int Numero_de_goles_Equipo2;
-
         string Ganador_del_partido;
         Equipo Equipo1;
         Equipo Equipo2;
