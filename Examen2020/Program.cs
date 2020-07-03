@@ -2,6 +2,8 @@
 
 namespace Examen2020
 {
+
+
     class MainClass
     {
         public static void Main(string[] args)
@@ -117,8 +119,7 @@ namespace Examen2020
                         break;
                     case ("4"):
 
-
-
+                        partido.SimularPartido();
 
                         break;
 

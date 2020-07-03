@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 namespace Examen2020
 {
     public class Partido
@@ -47,10 +48,80 @@ namespace Examen2020
             {
                 for (int i = 1; i <= 90; i++)
                 {
-                    throw new NotImplementedException();
+
+                    List<Jugador> jugadores1 = Equipo1.Devolverjugadoresdeesteequipo();
+                    List<Jugador> jugadores2 = Equipo2.Devolverjugadoresdeesteequipo();
+
+                    foreach(Jugador jugadores11 in jugadores1)
+                    {
+
+                        foreach(Jugador jugadores22 in jugadores2)
+                        {
+
+
+                           if(jugadores11.Anotaciondeljugador(jugadores1))
+                            {
+
+                                Numero_de_goles_equipo1++;
+
+                               
+
+
+                            }
+
+
+
+                            if (jugadores22.Anotaciondeljugador(jugadores2))
+                            {
+
+
+                                Numero_de_goles_Equipo2++;
+
+                            }
+                            Equipo1.RetornarObjetoEntrenador().CambiarJugador(jugadores11, jugadores1); //Con esto veo el cambio de equipo del equipo 1 
+                            Equipo2.RetornarObjetoEntrenador().CambiarJugador(jugadores22, jugadores2); //Con esto veo el cambio de equipo del equipo 2
+                             
+                        }
+
+
+
+                    }
+
+
+                    Equipo1.OnLesiondelJugador(jugadores1); //Con esto veo la lesiones del partido del equipo 1
+                    Equipo2.OnLesiondelJugador(jugadores2); //Con esto veo las lesiones del partido del equipo 2
+
+
+                   
+        
+
 
 
                 }
+
+                if (Numero_de_goles_equipo1 > Numero_de_goles_Equipo2)
+                {
+
+                    Console.WriteLine("Ha ganado el equipo 1");
+
+
+                }
+                else if (Numero_de_goles_equipo1 < Numero_de_goles_Equipo2)
+                {
+
+                    Console.WriteLine("Ha ganado el equipo 2 ");
+
+
+                }
+                else if (Numero_de_goles_equipo1 == Numero_de_goles_Equipo2)
+                {
+
+                    Console.WriteLine("El partido ha sido un empate");
+
+
+                }
+
+
 
 
             }

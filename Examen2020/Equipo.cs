@@ -190,7 +190,7 @@ namespace Examen2020
 
 
         }
-        protected virtual void OnLesiondelJugador(List<Jugador> jugadores)
+        public virtual void OnLesiondelJugador(List<Jugador> jugadores)
         {
 
             if (SendingLesion != null)
@@ -256,10 +256,35 @@ namespace Examen2020
             Console.WriteLine("Medico: "+ medicoequipo.nombre);
 
         }
+
+        public Medico RetornarnobjetoMedico()
+        {
+
+            return medicoequipo;
+
+
+        }
+
+        public Entrenador RetornarObjetoEntrenador()
+        {
+            return entrenadorequipo;
+
+
+        }
+
+
+
         public void Nombreequipo()
         {
 
             Console.WriteLine("NombredelEquipo: " +NombredelEquipo);
+
+
+        }
+        public List<Jugador> Devolverjugadoresdeesteequipo()
+        {
+
+            return Jugadores;
 
 
         }

@@ -33,7 +33,7 @@ namespace Examen2020
             this.Arquero = arquero;
         }
 
-        public void Anotaciondeljugador(List<Jugador> jugadores)
+        public bool Anotaciondeljugador(List<Jugador> jugadores)
         {
             foreach(Jugador jugarreta in jugadores)
             {
@@ -43,17 +43,18 @@ namespace Examen2020
                 {
                     Console.WriteLine("Golazo del jugador" + jugarreta.nombre);
 
-
+                    return true;
                 }
 
                 else
                 {
                     Tapadadelarquero(jugadores);
+                    return false;
                 }
 
 
             }
-           
+            return false;
        
 
         }
