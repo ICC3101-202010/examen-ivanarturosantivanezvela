@@ -1,0 +1,6 @@
+/Users/Ivan/Desktop/examen-ivanarturosantivanezvela/Examen2020/bin/Debug/Examen2020.exe
+/Users/Ivan/Desktop/examen-ivanarturosantivanezvela/Examen2020/bin/Debug/Examen2020.pdb
+/Users/Ivan/Desktop/examen-ivanarturosantivanezvela/Examen2020/obj/Debug/Examen2020.csprojAssemblyReference.cache
+/Users/Ivan/Desktop/examen-ivanarturosantivanezvela/Examen2020/obj/Debug/Examen2020.csproj.CoreCompileInputs.cache
+/Users/Ivan/Desktop/examen-ivanarturosantivanezvela/Examen2020/obj/Debug/Examen2020.exe
+/Users/Ivan/Desktop/examen-ivanarturosantivanezvela/Examen2020/obj/Debug/Examen2020.pdb
